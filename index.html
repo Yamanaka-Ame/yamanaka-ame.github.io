@@ -1,0 +1,37 @@
+---
+layout: default
+title: 主页
+---
+
+<div class="content">
+  
+  {% for post in paginator.posts %}
+    <div class="post-item" onclick="window.location='{{ post.url | relative_url }}'">
+      <h3>{{ post.title }}</h3>
+      <p><strong>发布于：</strong>{{ post.date | date: "%Y年%m月%d日" }}</p>
+      <p>{{ post.excerpt | strip_html | truncate: 35 }}</p>
+    </div>
+  {% endfor %}
+
+  <hr>
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}"><<</a>
+  {% else %}
+    {% if paginator.page == 1 %}
+      <a href="{{ '/page' | append: paginator.total_pages | relative_url }}"><<</a>
+    {% else %}
+      <a href="{{ paginator.total_pages | relative_url }}"><<</a>
+    {% endif %}
+  {% endif %}
+        
+  <span>[{{ paginator.page }}/{{ paginator.total_pages }}]</span>
+  
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">>></a>
+  {% else %}
+    <a href="{{ '/' | relative_url }}">>></a>
+  {% endif %}
+</div>
+{% endif %}

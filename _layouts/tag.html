@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+  <h4>有标签「{{ page.title }}」的页面：</h4>
+
+  <ul>
+    {% for post in page.posts %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></a></li>
+    {% endfor %}
+  </ul>

@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<div class="post">
+  <h2 class="post-title">{{ page.title }}</h2>
+  <hr>
+  <div class="post-content">
+    {{ content }}
+  </div>
+  
+  {% if page.tags %}
+  <div class="post-tags">
+    <span>标签：</span>
+    {% for tag in page.tags %}
+      <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}/">{{ tag }}</a>
+      {% unless forloop.last %}, {% endunless %}
+    {% endfor %}
+  </div>
+{% endif %}
+</div>
+
+<div class="post-nav">
+  {% if page.previous %}
+    <a href="{{ page.previous.url }}"> << {{ page.previous.title }}  </a>
+  {% endif %}
+
+  <span> | {{ page.title }} | </span>
+
+  {% if page.next %}
+    <a href="{{ page.next.url }}"> {{ page.next.title }}>> </a>
+  {% endif %}
+</div>

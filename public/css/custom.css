@@ -1,0 +1,160 @@
+/*
+引用的字体分别为：
+思源宋体
+仿宋
+楷体
+Times New Roman
+*/
+@import url('https://google-fonts.mirrors.sjtug.sjtu.edu.cn/css2?family=Noto+Serif+SC:wght@200..900&display=swap');
+
+@font-face {
+    font-family: 'FangSong';
+    src: url('https://cdn.jsdelivr.net/gh/Reqeekouton/reqeekouton.github.io@91f4d12bd2c52ee1329b1c08b1f97692eb02030f/public/fonts/Fangsong_GB2312.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'KaiTi';
+    src: url('https://cdn.jsdelivr.net/gh/Reqeekouton/reqeekouton.github.io@0ad4244f9ec7ab35dd05313cd1e05d7e80b68d4c/public/fonts/Kaiti_GB2312.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Times New Roman';
+    src: url('https://cdn.jsdelivr.net/gh/Reqeekouton/reqeekouton.github.io@8119b1dbc6d72918c0692f3fb2a13cb4bbd85596/public/fonts/Times%20New%20Roman.ttf') format('truetype');
+}
+
+.name{
+	font-family: "KaiTi", "Times New Roman", serif;
+	}
+
+/*首页显示文章*/
+.post-item {
+  background-color: #fff; 
+  border: 2px solid #ddd; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  padding: 16px; 
+  margin-bottom: 20px; 
+  transition: transform 0.2s ease, box-shadow 0.2s ease; 
+  cursor: pointer; 
+}
+
+.post-item:hover {
+  transform: translateY(-3px); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+}
+
+.post-link {
+  text-decoration: none;
+}
+
+
+.post-item h3 {
+  margin-top: 0;
+  font-family: 'Times New Roman', 'Noto Serif SC', serif; 
+  font-weight: 700 !important;
+  color: #333;
+}
+
+
+.post-item p {
+  font-family: 'Times New Roman', 'FangSong', serif; 
+  font-weight: 400;
+  color: #666; 
+}
+/*页面与文章标题*/
+.page-title, 
+.post-title {
+  text-align:center;
+  font-weight: 700 !important;
+	}
+	
+/*文章标签*/
+.post-tags{
+	font-family: 'Times New Roman', "KaiTi", "PT Sans", Helvetica, Arial, sans-serif;
+	font-size: 0.75em;
+	}
+	
+ .post-tags a {
+  color: #007acc; 
+  text-decoration: none; 
+}
+
+.post-tags a:hover {
+  text-decoration: underline; 
+}
+
+/*显示上一篇／下一篇文章*/
+.post-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.75em
+}
+
+.post-nav a, .post-nav span {
+  margin: 0;
+  padding: 0;
+}
+
+.pagination{
+	font-family: 'Times New Roman', "KaiTi", "PT Sans", Helvetica, Arial, sans-serif;
+	font-size: 1.25em;
+}
+
+/*页脚*/
+footer {
+  background-color: e5e5e5;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 12px;
+}
+
+.footer-content a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+/*页面与文章内容及字体*/
+.post-content,
+.page-content  {
+    font-family: 'Times New Roman', 'FangSong', serif;
+    font-weight: 400 !important;
+}
+
+.wrap {
+  position: relative;
+  width: 100%;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  font-family:'Times New Roman', 'Noto Serif SC', 'FangSong', serif;
+}
+
+.page-title, .post-title, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Times New Roman', 'Noto Serif SC', 'PT Sans', Helvetica, Arial, sans-serif;
+  font-weight: 700 !important;
+  color:#313131;
+  letter-spacing: -.025rem;
+	}
+
+/* 暗色模式样式 */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  p, strong, .post-title, .page-title, h1, h2, h3, h4, h5, h6, .post-item h3, .post-item p, .masthead-title a {
+    color: #e0e0e0;
+  }
+  .post-item, .sidebar-toggle{
+    background-color: #121212;
+  }
+}

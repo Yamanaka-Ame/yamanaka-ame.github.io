@@ -1,0 +1,51 @@
+# 站点基本信息
+title: 山中旅馆避难所
+description: 好麻烦……
+baseurl: "" 
+url: "https://yamanaka-ame.github.io"
+
+# 作者信息
+author:
+  name: "山中雨"
+  email: "mount-rain@foxmail.com"
+
+# 社交媒体链接
+social:
+  twitter: "Yamanaka_Ame"
+  github: "Yamanaka-Ame"
+
+# 站点设置
+markdown: kramdown
+highlighter: rouge
+
+# Permalink 设置
+permalink: /:categories/:title
+
+# 文件处理
+exclude: 
+  - README.md
+
+# 插件配置
+plugins:
+  - jemoji
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-archives
+  - jekyll-paginate
+
+jekyll-archives:
+  enabled:
+    - tags
+  layouts: 
+    tag: tag
+  permalinks:
+    tag: /tag/:name/
+
+paginate: 5
+paginate_path: "/page:num/"
+    
+# 自定义变量
+custom:
+  github_repo: "https://github.com/Yamanaka-Ame/yamanaka-ame.github.io" # GitHub 仓库链接
+  version: "0.0.1-beta" # 站点或项目的版本号
